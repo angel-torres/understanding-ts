@@ -25,4 +25,10 @@ class AccountManager {
 }
 
 const newAdmin = new AccountManager("newAdmin", "newPassword");
+const newUser: User = {username:"newUser", password:"newPassword"}
+
+console.log(newUser)
+newAdmin.approveUser(newUser)
+console.log(newUser)
+
 

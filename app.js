@@ -11,5 +11,7 @@ var AccountManager = /** @class */ (function () {
     return AccountManager;
 }());
 var newAdmin = new AccountManager("newAdmin", "newPassword");
-
-console.log("newAdmin", newAdmin)
+var newUser = { username: "newUser", password: "newPassword" };
+console.log(newUser);
+newAdmin.approveUser(newUser);
+console.log(newUser);
