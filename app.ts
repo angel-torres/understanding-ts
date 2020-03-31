@@ -22,8 +22,15 @@ class AccountManager {
         const approvedUser = user as ApprovedUser;
         approvedUser.approvedSince = Date.now();
     }
+
+    static generateRandomNumber() { 
+        // static methods can be called without instantiating a class
+        return Math.random()
+    };
 }
 
+const random = AccountManager.generateRandomNumber();
+console.log("random - ", random);
 const newAdmin = new AccountManager("newAdmin", "newPassword");
 const newUser: User = {username:"newUser", password:"newPassword"}
 

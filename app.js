@@ -8,8 +8,14 @@ var AccountManager = /** @class */ (function () {
         var approvedUser = user;
         approvedUser.approvedSince = Date.now();
     };
+    AccountManager.generateRandomNumber = function () {
+        return Math.random();
+    };
+    ;
     return AccountManager;
 }());
+var random = AccountManager.generateRandomNumber();
+console.log("random - ", random);
 var newAdmin = new AccountManager("newAdmin", "newPassword");
 var newUser = { username: "newUser", password: "newPassword" };
 console.log(newUser);
