@@ -1,3 +1,4 @@
+"use strict";
 var AccountManager = /** @class */ (function () {
     function AccountManager(username, password) {
         this.username = username;
@@ -9,6 +10,7 @@ var AccountManager = /** @class */ (function () {
         approvedUser.approvedSince = Date.now();
     };
     AccountManager.generateRandomNumber = function () {
+        // static methods can be called without instantiating a class
         return Math.random();
     };
     ;
