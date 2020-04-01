@@ -52,14 +52,20 @@ export class Dealer {
     };
 
     readCard(card: Card):string {
-
-        return '';
+        return `${Suit[card[0]]} ${CardNumber[card[1]]}`;
     }
 
+    readHand(cards: Card[]):void {
+        for(let card of cards){
+            console.log("card - ", newDealer.readCard(card));
+        }
+    }
 }
 
 const newDealer = new Dealer();
 
 console.log(newDealer.getLength());
-console.log(newDealer.dealHand(5));
+const hand1 = newDealer.dealHand(5) ;
+newDealer.readHand(hand1);
+
 console.log(newDealer.getLength());

@@ -63,12 +63,19 @@ var Dealer = /** @class */ (function () {
     };
     ;
     Dealer.prototype.readCard = function (card) {
-        return '';
+        return Suit[card[0]] + " " + CardNumber[card[1]];
+    };
+    Dealer.prototype.readHand = function (cards) {
+        for (var _i = 0, cards_1 = cards; _i < cards_1.length; _i++) {
+            var card = cards_1[_i];
+            console.log("card - ", newDealer.readCard(card));
+        }
     };
     return Dealer;
 }());
 exports.Dealer = Dealer;
 var newDealer = new Dealer();
 console.log(newDealer.getLength());
-console.log(newDealer.dealHand(5));
+var hand1 = newDealer.dealHand(5);
+newDealer.readHand(hand1);
 console.log(newDealer.getLength());
