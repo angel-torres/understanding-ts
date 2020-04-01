@@ -42,8 +42,8 @@ export class Dealer {
     };
 
     // deals five cards
-    dealHand(numberOfCards: number):Card[] { 
-        return [];
+    dealHand(numberOfCards: number):Card[] {
+        return this.cards.splice(this.getLength() - numberOfCards, numberOfCards)
     };
 
     // gives how many cards are left in deck
@@ -61,4 +61,5 @@ export class Dealer {
 const newDealer = new Dealer();
 
 console.log(newDealer.getLength());
-console.log(newDealer.cards);
+console.log(newDealer.dealHand(5));
+console.log(newDealer.getLength());

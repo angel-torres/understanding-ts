@@ -54,7 +54,7 @@ var Dealer = /** @class */ (function () {
     ;
     // deals five cards
     Dealer.prototype.dealHand = function (numberOfCards) {
-        return [];
+        return this.cards.splice(this.getLength() - numberOfCards, numberOfCards);
     };
     ;
     // gives how many cards are left in deck
@@ -70,4 +70,5 @@ var Dealer = /** @class */ (function () {
 exports.Dealer = Dealer;
 var newDealer = new Dealer();
 console.log(newDealer.getLength());
-console.log(newDealer.cards);
+console.log(newDealer.dealHand(5));
+console.log(newDealer.getLength());
