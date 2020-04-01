@@ -1,4 +1,7 @@
 "use strict";
+// enum give you a group of related values that belong to a specific group
+// when compiled to JavaScript they create an array of tuples e.g. [[0,1], [1,2]]
+// this is beneficial because it gives us a more readable way of dealing with groups related things
 Object.defineProperty(exports, "__esModule", { value: true });
 var Suit;
 (function (Suit) {

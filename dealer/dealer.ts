@@ -1,4 +1,8 @@
 
+// enum give you a group of related values that belong to a specific group
+// when compiled to JavaScript they create an array of tuples e.g. [[0,1], [1,2]]
+// this is beneficial because it gives us a more readable way of dealing with groups related things
+
 enum Suit {
     Clubs, Diamonds, Hearts, Spades
 }
@@ -9,9 +13,13 @@ enum CardNumber {
     Jack, Queen, King
 }
 
+// this is an example of a tuple
+// it looks like an array but we are able to define the order of specific things to hold
+// in this case this tuple will hold two values
+// the frist value belongs to the Suit enum and the second to CardNumber enum
 type Card = [Suit, CardNumber]
 
-function shuffleArray(a: any[]) {
+function shuffleArray(a: Card[]) {
     // Iterate over the array
     for (let i = a.length; i; i--) {
       // Get next index
