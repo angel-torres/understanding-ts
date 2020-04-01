@@ -24,8 +24,15 @@ var CardNumber;
     CardNumber[CardNumber["King"] = 12] = "King";
 })(CardNumber || (CardNumber = {}));
 function shuffleArray(a) {
+    var _a;
+    // Iterate over the array
+    for (var i = a.length; i; i--) {
+        // Get next index
+        var j = Math.floor(Math.random() * i);
+        // Swap positions
+        _a = [a[j], a[i - 1]], a[i - 1] = _a[0], a[j] = _a[1];
+    }
 }
-;
 function createDeck() {
     var cards = [];
     for (var s = 0; s < Object.keys(Suit).length; s += 2) {

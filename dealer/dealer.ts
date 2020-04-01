@@ -11,10 +11,15 @@ enum CardNumber {
 
 type Card = [Suit, CardNumber]
 
-function shuffleArray(a: any[]){
-
-
-};
+function shuffleArray(a: any[]) {
+    // Iterate over the array
+    for (let i = a.length; i; i--) {
+      // Get next index
+      let j = Math.floor(Math.random() * i);
+      // Swap positions
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
+}
 
 function createDeck(): Card[] {
     const cards: Card[] = [];
