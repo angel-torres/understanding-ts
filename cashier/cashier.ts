@@ -13,18 +13,35 @@ export function cashier(): CartAPI {
 
     return {
         get length():number {
-            return 4
-        },
-        get total():number {
             return items.length
         },
-        add(name: string, price: number, qty?: number):CartAPI {
-            return this
+        get total():number {
+            const total = items.reduce((accumulator, item) => {
+                return accumulator + (item.price * item.qty)
+            }, 0);
+            return total;
         },
-        addItem():CartAPI {
+        add(name: string, price: number, qty: number = 1):CartAPI {
+            const newItem: CartItem = {
+                name,
+                price,
+                qty
+            };
+            items.push(newItem);
+            return this;
+        },
+        addItem(item):CartAPI {
+            items.push(item)
             return this
         }
     }
 
 };
 
+const cereal = {
+    name: "Frosted Flakes",
+    price: 2.99,
+    qty: 2
+}
+
+console.log(cashier().addItem(cereal).total)
