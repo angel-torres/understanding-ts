@@ -1,3 +1,6 @@
 "use strict";
-function TypedStack() {
-}
+var Stack = /** @class */ (function () {
+    function Stack() {
+    }
+    return Stack;
+}());
