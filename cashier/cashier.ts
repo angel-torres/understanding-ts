@@ -1,5 +1,5 @@
   
-interface CartItem {name: string, price: number, qty: number};
+interface CartItem {name: string, price: number, qty?: number};
 
 interface CartAPI {
   length: number;
@@ -17,7 +17,7 @@ export function cashier(): CartAPI {
         },
         get total():number {
             const total = items.reduce((accumulator, item) => {
-                return accumulator + (item.price * item.qty)
+                return accumulator + (item.price * (item.qty || 1))
             }, 0);
             return total;
         },

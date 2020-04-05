@@ -9,7 +9,7 @@ function cashier() {
         },
         get total() {
             var total = items.reduce(function (accumulator, item) {
-                return accumulator + (item.price * item.qty);
+                return accumulator + (item.price * (item.qty || 1));
             }, 0);
             return total;
         },
