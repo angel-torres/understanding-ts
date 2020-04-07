@@ -1,0 +1,23 @@
+{
+  "name": "understanding-ts",
+  "version": "1.0.0",
+  "description": "Tutorial Link: https://www.youtube.com/watch?v=BwuLxPH8IDs&amp;t=610s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angel-torres/understanding-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angel-torres/understanding-ts/issues"
+  },
+  "homepage": "https://github.com/angel-torres/understanding-ts#readme",
+  "dependencies": {
+    "@types/node": "^13.11.0"
+  }
+}

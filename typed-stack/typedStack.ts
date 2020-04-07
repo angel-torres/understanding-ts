@@ -27,11 +27,9 @@ class Stack<T> implements IStack<T> {
                 next: this.head
             }
             this.head = n
-
         }
 
         return this;
-
     }
 
     pop(): T | undefined {
@@ -46,7 +44,6 @@ class Stack<T> implements IStack<T> {
         let l = 0;
         while(n) {
             l ++;
-            console.log(n.data)
             n = n.next;
         }
 

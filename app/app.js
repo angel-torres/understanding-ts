@@ -1,4 +1,3 @@
-"use strict";
 var AccountManager = /** @class */ (function () {
     function AccountManager(username, password) {
         this.username = username;
